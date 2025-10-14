@@ -1,0 +1,33 @@
+Box: Dancing
+
+Target: 10.129.1.12
+
+port:
+```
+135 
+139
+445 - SMB
+5985
+
+```
+# To list available shares on a server,
+Command: smbclient -L 10.129.1.12 
+	- Pass null/blank worked
+	---> Found Share - WorkShare
+
+# Connect To the WorkShare Share with user anonymous
+command: smbclient //10.129.1.12/WorkShare -U anonymous
+	Pass- Blank
+	--> Worked Got Access to the share
+Used dir to list all files in current directory
+--> Found Amy.J and james.p
+Navigated In both using cd and checked using dir in both directory
+--> Found flag.txt in james.P
+
+Used get flag.txt to download the file
+Flag: 5f61c10dffbc77a704d76016a22f1664
+
+# Key Lesson
+--> Always Check for available shares on port 445(SMB)
+--> anonymous login work on most as common creds
+--> To patch restrict anonymous login.
