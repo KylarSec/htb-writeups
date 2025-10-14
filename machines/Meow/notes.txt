@@ -1,0 +1,26 @@
+# Machine - Meow
+
+## Target : 10.129.1.17
+
+# Ports
+```
+23 - telnet
+
+```
+
+# Tried Login Through telnet
+Command: telnet 10.129.1.17 23
+	# Asked for login
+	Tried: username : admin pass: blank --> Failed
+	Tried: username : user pass: blank --> Failed
+	Tried: username : root --> Got access without pass
+	Got shell as root
+
+# Navigated thorugh
+Command: ls --> Found Flag.txt
+--> b40abdfe23665f766f9c61ecba8a4c19
+
+# Key Learning
+--> Default credentials are easily guessed to get access
+-->Telnet without authentication easily accessed
+
