@@ -1,0 +1,29 @@
+HTB Machine : Fawn
+
+Target: 10.129.1.14
+
+Ports
+```
+21 - ftp
+```
+
+# Tried login  through ftpclient
+Command: ftp 10.129.1.14 21   # Specified target with port
+        # Tried user name blank and pass blank --> No Access
+
+        # Tried user name anonymous and pass blank --> Got access to remote  system
+        # Checked with command: pwd
+
+# Navigated in ftp remote server
+ command: ls --> Got flag.txt
+        Tried
+        cat flag.txt --> Didn't worked
+        so,
+        get flag.txt --> Flag.txt downloaded on my system
+
+Flag --> 035db21c881520061c53e0536e44f815
+
+
+#Ket Learning
+--> Ftp server with anonymous login can be used to get access to the server so it's better to patch it up with better credentials and no anonymous login.
+                                         
